@@ -1,0 +1,36 @@
+{
+  "name": "messages-queue",
+  "version": "0.0.1",
+  "description": "Messages queue service, allows to queue and manage notifications",
+  "main": "app/app.js",
+  "scripts": {
+    "start": "nodemon app/app.js",
+    "test": "mocha --recursive"
+  },
+  "author": "Bartosz Herba",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "config": "^1.29.4",
+    "express": "^4.16.2",
+    "helmet": "^3.11.0",
+    "http-status": "^1.0.1",
+    "mongoose": "^5.0.6",
+    "socket.io": "^2.0.4"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^5.0.1",
+    "nodemon": "^1.15.1",
+    "sinon": "^4.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bartoszherba/messages-service.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bartoszherba/messages-service/issues"
+  },
+  "homepage": "https://github.com/bartoszherba/messages-service#readme"
+}

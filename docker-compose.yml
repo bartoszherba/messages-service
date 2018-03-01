@@ -1,0 +1,23 @@
+version: "3"
+services:
+  app:
+    container_name: messages-service
+    restart: always
+    environment:
+      - NODE_ENV=docker
+    build:
+      context: .
+      dockerfile: ./docker/node/Dockerfile
+    ports:
+      - "3000:3000"
+    links:
+      - mongodb
+    volumes:
+      - ./data/app:/app
+  mongodb:
+    container_name: messages-mongodb
+    image: mongo
+    volumes:
+      - ./data/db:/data/db
+    ports:
+      - "27017:27017"

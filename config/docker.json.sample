@@ -1,0 +1,13 @@
+{
+    "mongo": {
+        "hostname": "mongo-messages",
+        "port": "27017",
+        "dbName": "messages"
+    },
+    "server": {
+        "port": 3000,
+        "hostname": "0.0.0.0",
+        "allowOrigin": "*",
+        "allowOriginMethods": "DELETE, GET, PATCH, PUT"
+    }
+}
