@@ -148,12 +148,12 @@ const configure = (app, repository, manager, io) => {
     app.put('/v1/message', function (req, res) {
         Promise.all([manager.addNewMessage(req.body), repository.getList({ identifier: req.body.identifier })])
             .then((response) => {
-                const [newMsg, list] = response;
-                io.in(newMsg.identifier).emit('new-message', { newMsg: newMsg, total: list.length + 1 });
+                const [message, list] = response;
+                io.in(message.identifier).emit('new-message', { message: message, total: list.length + 1 });
                 res.status(200)
                     .send({
                         code: 200,
-                        message: newMsg
+                        message: message
                     });
             }).catch((err) => {
                 res.status(400)
