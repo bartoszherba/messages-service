@@ -25,7 +25,7 @@ const messageSchema = new mongoose.Schema({
         type: String,
         default: Type.Success
     },
-    trigger: {
+    attributes: {
         type: Array,
         default: [],
     }
