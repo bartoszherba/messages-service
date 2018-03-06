@@ -9,6 +9,10 @@ Notification microservice was created as a server side, event driven messages st
 * mongodb.com
 * swagger.io
 
+## Available Clients
+* [magento 2](https://bartoszherba.github.io/magento2-notifications-service-client/)
+
+
 ## How to run up the service?
 
 Everything required to run up service is available in the package
